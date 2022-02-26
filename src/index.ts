@@ -1,8 +1,8 @@
+import dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
-import 'express-async-errors'
+import 'express-async-errors';
 import { json } from 'body-parser';
 import mongoose from 'mongoose';
-import dev from './config/dev';
 import cookieSession from 'cookie-session';
 
 import { currentUserRouter } from './routes/current-user';
@@ -11,6 +11,12 @@ import { signupUserRouter } from './routes/signup';
 import { signoutUserRouter } from './routes/signout';
 import { errorHandler } from './middlewares/error-handler';
 import { NotFoundError } from './errors/not-found-error';
+
+// Initailize configuration
+dotenv.config();
+
+const port = process.env.SERVER_PORT;
+const mongoUrl = process.env.MONGO_URL;
 
 const app = express();
 app.set('trust proxy', true);
@@ -32,15 +38,19 @@ app.all('*', async (req: Request, res: Response) => {
 app.use(errorHandler);
  
 const start = async () => {
+  if(!process.env.JWT_KEY){
+    throw new Error('JWT_KEY must be defined')
+  }
+
   try {
-    await mongoose.connect(dev.mongoURL);
+    await mongoose.connect(mongoUrl!);
     console.log('Connected to mongoDB')
   } catch(err) {
     console.error(err)
   } 
 
-  app.listen(dev.port, () => {
-    console.log(`Listening on port ${dev.port}...`);
+  app.listen(port, () => {
+    console.log(`Listening on port ${port}...`);
   });
 }
 
