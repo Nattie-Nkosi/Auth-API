@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { app } from './app';
 
-const port = process.env.SERVER_PORT;
+const port = process.env.PORT;
 const mongoUrl = process.env.MONGO_URL;
 const jwtKey = process.env.JWT_KEY;
 
