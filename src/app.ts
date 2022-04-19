@@ -17,6 +17,8 @@ dotenv.config();
 const app = express();
 
 // cors middleware
+
+const URL_API = 'http://localhost:3000';
 const options: cors.CorsOptions = {
   allowedHeaders: [
     'Origin',
@@ -27,11 +29,9 @@ const options: cors.CorsOptions = {
   ],
   credentials: true,
   methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-  origin: 'http://localhost:3000',
+  origin: URL_API,
   preflightContinue: false,
 };
-
-// https://auth-api-typescript.herokuapp.com/
 
 app.use(cors(options));
 app.set('trust proxy', true);
