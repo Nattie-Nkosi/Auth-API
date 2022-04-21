@@ -25,11 +25,12 @@ This is a Authentication Service API starter files.
 - Check to see if TypeScript was installed successfully by running `tsc -v`.
 - Create a MongoURI key at [MongoDB](https://www.mongodb.com/atlas).
 - Create a .env file on root folder and place set your MongoURI key e.g (`MONGO_URL`='mongourl').
-- Inside a .env file set your `JWT_KEY` token.
+- Inside a .env file set your `JWT_KEY` token (`JWT_KEY`='jwtKey').
+- Inside app.ts set up cors middleware, just set your client url `URL_API` to allow API to receive requests from your client.
 - On your CMD, Git Bash or Terminal run `npm i` to install dependencies.
 - Run the APi `npm run dev`.
 
-The API runs on port `3000`.
+The API runs on port `http://localhost:3000`.
 Use [Postman API Platform](https://www.postman.com/) to send http requests on port `3000`.
 
 ---

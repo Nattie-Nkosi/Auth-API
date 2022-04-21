@@ -16,8 +16,13 @@ dotenv.config();
 
 const app = express();
 
-// cors middleware
-const URL_API = 'http://localhost:3000';
+/* 
+  cors middleware
+
+  e.g
+  const URL_API = http://localhost:3000
+*/
+const URL_API = ''; // -> Enter your Client url
 const options: cors.CorsOptions = {
   allowedHeaders: [
     'Origin',
