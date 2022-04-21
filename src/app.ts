@@ -17,7 +17,6 @@ dotenv.config();
 const app = express();
 
 // cors middleware
-
 const URL_API = 'http://localhost:3000';
 const options: cors.CorsOptions = {
   allowedHeaders: [
@@ -41,8 +40,6 @@ app.use(cookieSession({
   secure: process.env.NODE_ENV !== 'test'
 }));
 
-
-
 app.use(currentUserRouter);
 app.use(signinUserRouter);
 app.use(signupUserRouter);
@@ -51,7 +48,6 @@ app.use(signoutUserRouter);
 app.all('*', async (req: Request, res: Response) => {
   throw new NotFoundError()
 });
-
 
 app.use(errorHandler);
 
