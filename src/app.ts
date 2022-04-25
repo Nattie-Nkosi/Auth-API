@@ -16,28 +16,8 @@ dotenv.config();
 
 const app = express();
 
-/* 
-  cors middleware
 
-  e.g
-  const URL_API = http://localhost:3000
-*/
-const URL_API = ''; // -> Enter your Client url
-const options: cors.CorsOptions = {
-  allowedHeaders: [
-    'Origin',
-    'X-Requested-With',
-    'Content-Type',
-    'Accept',
-    'X-Access-Token'
-  ],
-  credentials: true,
-  methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-  origin: URL_API,
-  preflightContinue: false,
-};
-
-app.use(cors(options));
+app.use(cors());
 app.set('trust proxy', true);
 app.use(json());
 app.use(cookieSession({
