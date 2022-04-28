@@ -6,6 +6,8 @@
 
 This is a Authentication Service API starter files.
 
+('https://auth-api-typescript.herokuapp.com/')[Link]
+
 ---
 
 ### TECH STACK
