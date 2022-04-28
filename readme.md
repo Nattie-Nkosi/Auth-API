@@ -6,7 +6,7 @@
 
 This is a Authentication Service API starter files.
 
-[Link]('https://auth-api-typescript.herokuapp.com/')
+- Doc [Link]('https://auth-api-typescript.herokuapp.com/').
 
 ---
 
