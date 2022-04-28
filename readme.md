@@ -4,9 +4,7 @@
 
 ### DESCRIPTION
 
-This is a Authentication Service API starter files.
-
-- Doc [Link]('https://auth-api-typescript.herokuapp.com/').
+This is a Authentication Service API starter files. [Link]('https://auth-api-typescript.herokuapp.com/')
 
 ---
 
