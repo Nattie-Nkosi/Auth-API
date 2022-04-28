@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
+import path from 'path';
 import 'express-async-errors';
 import { json } from 'body-parser';
 import cors from 'cors';
@@ -16,7 +17,10 @@ dotenv.config();
 
 const app = express();
 
-// cors middleware
+// Set static folder
+app.use(express.static(path.join(__dirname, '../public')))
+
+// Cors middleware
 app.use(cors());
 app.set('trust proxy', true);
 app.use(json());

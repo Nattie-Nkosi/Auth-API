@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Authentication | API</title>
+  <style>
+    ul {
+      list-style: circle;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+         <a class="title" class="navbar-item" href="https://auth-api-typescript.herokuapp.com/">Auth API</a> 
+      </div>
+
+      <div class="navbar-end">
+        <div class="nabar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="bd-tw-button button" data-social-network="Github" href="https://github.com/Nutty4616/Auth-API">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>repository</span>
+              </a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Medium Section -->
+  <section class="section is-medium">
+    <h1 class="title">How to Run Auth API </h1>
+    <h2 class="subtitle">
+      First Time
+    </h2>
+    <div class="box">
+      <div class="notification is-dark is-light">
+        <ul>
+          <li>Install NodeJS.</li>
+          <li>Install TypeScript globally using CLI using <code>npm install -g typescript</code>.</li>
+          <li>Check to see if TypeScript was installed successfully by running <code>tsc -v</code>.</li>
+          <li>Create a MongoURI key at MongoDB Atlas.</li>
+          <li>Create a .env file on root folder and place set your MongoURI key e.g (<code>MONGO_URL='mongourl'</code>).</li>
+          <li>Inside a .env file set your JWT_KEY token (<code>JWT_KEY='jwtKey'</code>).</li>
+          <li>Inside app.ts set up cors middleware, just set your client url <code>URL_API</code> to allow API to receive requests from your client.</li>
+          <li>On your CLI, Git Bash or Terminal run <code>npm i</code> to install dependencies.</li>
+          <li>Run the APi <code>npm run dev</code>.</li>
+        </ul>
+      </div>
+      
+      <p>Use Postman API Platform to send http requests on <a href="https://auth-api-typescript.herokuapp.com/">Auth APi</a></p>
+    </div>
+  </section>
+
+  <!-- Medium Section -->
+  <section class="section">
+    <h1 class="title">API ENDPOINTS</h1>
+    <div class="box">
+      <div class="notification is-success is-light">
+       <strong>POST</strong> signup a user <a href="#">/api/users/signup</a>
+      </div>
+      <div class="notification is-success is-light">
+       <strong>POST</strong> signin a user <a href="#">/api/users/signin</a>
+      </div>
+      <div class="notification is-success is-light">
+       <strong>GET</strong> current user <a href="#">/api/users/currentuser</a>
+      </div>
+      <div class="notification is-success is-light">
+       <strong>POST</strong> signout a user <a href="#">/api/users/signout</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Auth API</strong> by <a href="https://github.com/Nutty4616">Nattie Nkosi</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
